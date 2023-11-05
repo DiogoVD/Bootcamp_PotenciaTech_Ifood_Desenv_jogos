@@ -2,4 +2,4 @@
 Área de estudo do bootcamp potencia tech ifood para desenvolvimento de jogos.
 
 
-clone realizado
+clone realizado.
