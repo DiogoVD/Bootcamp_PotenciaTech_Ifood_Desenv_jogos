@@ -6,12 +6,21 @@
     <title>Formulario de Cadastro</title>
 </head>
 <body>
-    <form action="">
+    <form name="signup" method="get" action="#">
         Nome: <input type="text" name="name"><br>
         Idade: <input type="number" name="age"><br>
         Senha: <input type="password" name="password"><br>
         <button type="submit">Enviar</button>
-        ola
     </form>
 </body>
 </html>
+
+<!-- 
+propriedades do form:
+name: define o nome do forme;
+method: define como os dados serão enviados, GET - pela URL ou POST - por requisição;
+action: define qual a url serao enviados os dados;
+target: define se a requisição será processado na propria aba ou em outra(blank ou self)
+autocomplete: preenche os campos ao realizar o retorno de pagina ou dados salvos no navegador(ON ou OFF)
+onsubmit: realiza a execução de um codigo definido pelo programador para verificação quando enviado form.
+-->
