@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    <!-- definindo estilos css -->
+    <style>
+        /*Seletor por tag*/
+        h1{
+            background: blue;
+            color: aquamarine;
+        }
+        li{
+            background: lawngreen;
+        }
+
+        /*Seletor por ID*/
+        #boas-vindas{
+            color: blueviolet;
+        }
+        #definicao{
+            color: palevioletred;
+        }
+
+        /*Seletor por Classe*/
+        .seletor-comum{
+            color: red;
+        }
+        .texto-maiusculo{
+            text-transform: uppercase;
+        }
+
+        /*Seletor Universal*/
+        *{
+            font-weight: bold;
+        }
+
+        /*Seletor de atributo*/
+        [title]{
+            background: cyan;
+        }
+        [title="netflix"]{
+            background: red;
+        }
+        [title~="prime"]{
+            background: blue;
+        }
+        [title|="disney"]{
+            background: lightgreen;
+        }
+
+        /*
+        outros usos de atributos:
+        
+        [atrib^="prefixo"]{}
+        [atrib$="sufixo"]{}
+        [atrib*="palavra que contenha no atrubuto"]{}
+        */
+
+    </style>
+</head>
+<body>
+    <h1> Seletores CSS</h1>
+    <p id="boas-vindas">Bem vindo</p>
+    <p id="definicao">No CSS nós possuimos os seguintes seletores:</p>
+    <div>
+        <ul>
+            <li class="seletor-comum"><b>Seletor por Tipo:</b>Busca elemento por uma tag HTML.</li>
+            <li class="texto-maiusculo"><b>Seletor por ID(#):</b>Busca elementos atraves do "id"</li>
+            <li class="seletor-comum"><b>Seletor por Classe(.):</b>Busca elementos atraves do atributo "classe"</li>
+            <li class="seletor-comum texto-maiusculo"><b>Seletor Universal(*):</b>Seleciona toros os elementos HTML.</li>
+            <li><b>Seletor de atributo([atrib]):</b>Seleciona os elementos que possuem um atributo especifico em nosso documento HTML e conseguimos tambem buscar atributos com um valor especifico.</li>
+        </ul>
+    </div>
+
+    <ul>
+        <li title="netflix">Netflix</li>
+        <li title="prime video">Prime-Video</li>
+        <li title="disney-plus">Disney</li>
+    </ul>
+</body>
+</html>
