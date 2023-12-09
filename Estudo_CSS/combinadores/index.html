@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrupamento</title>
+    <style>
+
+        button{
+            font-style: italic;
+        }
+        /* nos casos abaixo a virgula funciona como uma porta OU*/
+        h1, p{
+            color: red;
+        }
+
+        h1, .corpo{
+            font-style: italic;
+        }
+
+        [id="bt1"], a{
+            background: pink;
+        }
+
+        /* nos casos abaixo quando nao há virgula a logica funciona como uma porta E*/
+        button[id="atualizar"]{
+            background: blueviolet;
+        }
+
+        /*
+        Combinadores
+
+        combinadores descendentes coloca um espaço entre os seletores 
+        ex: seletor espaço seletor {}
+
+        combinadores filhos coloca um > entre os seletores 
+        ex: seletor > seletor {}   
+        
+        combinadores irmão adjacentes coloca um + entre os seletores 
+        ex: seletor + seletor {}        
+
+        combinadores irmão geral coloca um ~ entre os seletores 
+        ex: seletor ~ seletor {} 
+        
+        */
+
+
+    </style>
+
+</head>
+<body>
+    <h1>Agrupamento de seletores</h1>
+    <p>Podemos aplicar as mesmas regras CSS para varios seletores. Para isso, podemos separar os seletoresutilizando uma virgula(,)</p>
+
+    <div class="corpo">Assim, não precisamos ficar copiando e colando os mesmos codigos para todos, nós podemos fazer um só bloco de CSS e reutilizar as mesmas regras!</div>
+
+    <br><br>
+
+    <a href="">Link 1</a><br><br>
+    <a href="">Link 2</a><br><br>
+    <a href="">Link 3</a><br><br>
+
+    <button id="bt1">Fechar página</button>
+    <button id="atualizar">Atualizar</button>
+    <button id="bt2">Novo</button>
+    
+</body>
+</html>
