@@ -5,16 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cores CSS</title>
     <style>
-        /* aplicando a cor transparente no objeto ele mostrará a cor do ambiente*/
+        /* 
+        Aplicando a cor transparente no objeto ele mostrará a cor do ambiente
+        
+        RGB(255, 255, 255) - cores variam na escala de 0 a 255 nos campos.
+        RGBA(255, 255, 255, 0.5) - o campo adicional(A -Alfa) varia de 0.0 a 1.0 para definir a transparencia da cor definida.
+
+        HEX(#00FF00) - cada dois digitos define uma cor e varia de 00 a FF em cada campo agrupado de 2 digitos.
+        HEX(#00FF0009) - os dois ultimos digitos determinam a transparencia da cor e varia de 00 a FF.
+
+        HSL(240, 100%, 50%) - A definição é da seguinte forma (cor, saturação, opacidade) cor varia de 0 a 360 conforme roda de cores, saturação e opacodade variam de 0 a 100%.
+        HSLA(240, 100%, 50%, 0.5) - segue a mesma definição do HSL porem o ultimo campo é definida a transparencia com valores de 0.0 a 1.0.
+        
+        */
         .predefinida{
             color: limegreen;
         }
         [id="RGB"]{
-            color: rgb(255, 0, 0;
+            color: rgb(255, 0, 0)
         }
-        [id="RGB"]{
-            color: rgb(255, 0, 0;
+        [id="RGBA"]{
+            color: rgba(255, 0, 0, 0.5)
         }
+        [id="Hexadecimal"]{
+            color: hex(#00FF00);
+        }
+        [id="Hexatras"]{
+            color: hex(#00FF0008);
+        }
+        [id="HSL"]{
+            color: hsl(240, 60%, 50%);
+        }
+        [id="HSLA"]{
+            color: hsl(240, 60%, 50%, 0.5);
+        }
+
     </style>
 </head>
 <body>
@@ -22,6 +47,7 @@
     <p id="RGB">RGB</p><br>
     <p id="RGBA">RGBA</p><br>
     <p id="Hexadecimal">Hexadecimal</p><br>
+    <p id="Hexatrans">Hexadecimal com transparencia</p><br>
     <p id="HSL">HSL</p><br>
     <p id="HSLA">HSLA</p>
 </body>
