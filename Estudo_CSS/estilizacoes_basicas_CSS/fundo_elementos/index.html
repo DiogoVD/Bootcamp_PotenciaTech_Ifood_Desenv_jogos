@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurando imagens com CSS</title>
+
+    <style>
+        p{
+            font-size: larger;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background-image: url("https://cdn-icons-png.flaticon.com/512/2997/2997062.png"), url("https://i0.wp.com/snydercutbr.com/wp-content/uploads/2023/04/critica-super-maior-bros.png?fit=1920%2C1229&ssl=1");
+        }
+        div.exemplo2{
+            width: 300px;
+            height: 300px;
+            border: 5px solid blue;
+            background-image: url("https://i0.wp.com/snydercutbr.com/wp-content/uploads/2023/04/critica-super-maior-bros.png?fit=1920%2C1229&ssl=1");
+            background-size: 120px;
+        }
+        /*
+        -------------------------------------------------
+        Background-size
+        */
+        #cover{
+            background-size: cover;
+        }
+        #contain{
+            background-size: contain;
+        }
+        #tamanho{
+            background-size: 50%;
+            /*
+            quando é passado apenas um valor esse valor refere-se a largura da imagem.
+            */
+        }
+        #exemplo-x-y{
+            background-size: 100px 200px;
+            /*
+            pode usar tbm tamanhos individuais de altura e largura, ex: background-size: 100px 200px;
+            */
+        }
+        #exemplo-camadas{
+            background-size: contain,cover;
+        }
+        /*
+        -------------------------------------------------
+        Background-repeat
+        */
+
+        #repeat-x{
+            background-repeat: repeat-x;
+        }
+        #repeat-y{
+            background-repeat: repeat-y;
+        }
+        #space{
+            background-repeat: space;
+        }
+        #round{
+            background-repeat: round;
+        }
+        #no-repeat{
+            background-repeat: no-repeat;
+        }
+        #multiples{
+            background-repeat: space round;
+            /*
+            ex: background-repeat: no-repeat space;
+            pode realizar diferentes combinaçoes das propriedades tanto para o eixo x quanto para o y*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Aula 1</h1>
+    <h3>Links Uteis</h3>
+    <p><a href="https://www.w3schools.com/cssref/pr_background-image.php">Link para consulta de documentação e propriedades</a></p>
+    <p><a href="https://projects.verou.me/css3patterns/#">Tipos estilizados de fundo</a></p>
+    <br>
+    <br>
+
+    <h1>Aula 2</h1>
+
+    <code>background-size: auto</code>
+    <div class="exemplo">
+    </div>
+
+    <code>background-size: cover</code>
+    <div id="cover" class="exemplo">
+    </div>
+
+    <code>background-size: contain</code>
+    <div id="contain" class="exemplo">
+    </div>
+
+    <code>background-size: valor</code>
+    <div id="tamanho" class="exemplo">
+    </div>
+
+    <code>background-size: <i>valor-1 valor</i></code>
+    <div id="exemplo-x-y" class="exemplo">
+    </div>
+
+    <code>background-size: <i>camada-1</i>></code>
+    <div id="exemplo-camadas" class="exemplo">
+    </div>
+
+    <br>
+    <br>
+
+    <h1>Aula 3</h1>
+
+    <code>background-repeat: repeat></code>
+    <div  class="exemplo2">
+    </div>
+
+    <code>background-repeat: repeat-x</code>
+    <div  id="repeat-x" class="exemplo2">
+    </div>
+
+    <code>background-repeat: repeat-y</code>
+    <div  id="repeat-y" class="exemplo2">
+    </div>
+
+    <code>background-repeat: space</code>
+    <div  id="space" class="exemplo2">
+    </div>
+
+    <code>background-repeat: round</code>
+    <div  id="round" class="exemplo2">
+    </div>
+
+    <code>background-repeat: no-repeat</code>
+    <div  id="no-repeat" class="exemplo2">
+    </div>
+
+    <code>background-repeat: multiples</code>
+    <div  id="multiples" class="exemplo2">
+    </div>
+
+
+    
+</body>
+</html>
