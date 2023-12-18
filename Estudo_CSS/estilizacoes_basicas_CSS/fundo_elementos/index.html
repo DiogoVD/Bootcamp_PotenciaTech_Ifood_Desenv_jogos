@@ -21,6 +21,32 @@
             background-image: url("https://i0.wp.com/snydercutbr.com/wp-content/uploads/2023/04/critica-super-maior-bros.png?fit=1920%2C1229&ssl=1");
             background-size: 120px;
         }
+        div.exemplo3{
+            width: 300px;
+            height: 300px;
+            border: 5px solid red;
+            background-image: url("https://i0.wp.com/snydercutbr.com/wp-content/uploads/2023/04/critica-super-maior-bros.png?fit=1920%2C1229&ssl=1");
+            background-size: 120px;
+            background-repeat: no-repeat;
+        }
+        div.exemplo4{
+            width: 300px;
+            height: 300px;
+            border: 5px solid green;
+            background-image: url("https://i0.wp.com/snydercutbr.com/wp-content/uploads/2023/04/critica-super-maior-bros.png?fit=1920%2C1229&ssl=1");
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: auto;
+        }
+        div.exemplo5{
+            width: 300px;
+            height: 300px;
+            border: 15px dashed yellow;
+            background-image: url("https://i0.wp.com/snydercutbr.com/wp-content/uploads/2023/04/critica-super-maior-bros.png?fit=1920%2C1229&ssl=1");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            padding: 30px;
+        }
         /*
         -------------------------------------------------
         Background-size
@@ -71,6 +97,45 @@
             /*
             ex: background-repeat: no-repeat space;
             pode realizar diferentes combinaçoes das propriedades tanto para o eixo x quanto para o y*/
+        }
+
+        /*
+        -------------------------------------------------
+        Background-position
+        
+        Pode se usar varias definiçoes da posição: left, right, top, botton, center, valores de posição.
+        pode definir tbm multiplas camadas basta separar por virgurla os valores.
+        */
+        #position{
+            background-position: center;
+        }
+
+        /*
+        -------------------------------------------------
+        Background-attachment
+        */
+        #fixed{
+            background-attachment: fixed;
+        }
+        #scroll{
+            background-attachment: scroll;
+        }
+        #local{
+            background-attachment: local;
+        }
+        
+        /*
+        -------------------------------------------------
+        Background-origin
+        */
+        #padding-box{
+            background-origin: padding-box;
+        }
+        #border-box{
+            background-origin: border-box;
+        }
+        #content-box{
+            background-origin: content-box;
         }
 
 
@@ -144,6 +209,52 @@
     <div  id="multiples" class="exemplo2">
     </div>
 
+    <br>
+    <br>
+
+    <h1>Aula 4</h1>
+
+    <code>background-position: ></code>
+    <div id="position" class="exemplo3">
+    </div>
+
+    <br>
+    <br>
+
+    <h1>Aula 5</h1>
+
+    <code>background-attachment: fixed ></code>
+    <div id="fixed" class="exemplo4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ligula turpis, vestibulum vitae mi nec, malesuada rutrum lorem. Donec eleifend dolor ut ullamcorper maximus. Integer mattis, eros a iaculis convallis, eros felis tristique quam, nec mollis erat enim ac nulla. Aliquam erat volutpat. Integer placerat vitae nibh nec placerat. Phasellus convallis, est eget fermentum tempor, quam sapien porta felis, at cursus augue ipsum eget purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus pretium nisl sit amet tortor luctus rhoncus. Integer eu mauris ut orci fringilla dignissim in id ante. Maecenas a porttitor eros. Fusce nec elit ut eros efficitur rutrum. Donec efficitur, mi ac porta hendrerit, felis diam laoreet ex, nec eleifend neque libero a urna.
+    </div>
+
+    <code>background-attachment: scroll ></code>
+    <div id="scroll" class="exemplo4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ligula turpis, vestibulum vitae mi nec, malesuada rutrum lorem. Donec eleifend dolor ut ullamcorper maximus. Integer mattis, eros a iaculis convallis, eros felis tristique quam, nec mollis erat enim ac nulla. Aliquam erat volutpat. Integer placerat vitae nibh nec placerat. Phasellus convallis, est eget fermentum tempor, quam sapien porta felis, at cursus augue ipsum eget purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus pretium nisl sit amet tortor luctus rhoncus. Integer eu mauris ut orci fringilla dignissim in id ante. Maecenas a porttitor eros. Fusce nec elit ut eros efficitur rutrum. Donec efficitur, mi ac porta hendrerit, felis diam laoreet ex, nec eleifend neque libero a urna.
+    </div>
+
+    <code>background-attachment: local ></code>
+    <div id="local" class="exemplo4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ligula turpis, vestibulum vitae mi nec, malesuada rutrum lorem. Donec eleifend dolor ut ullamcorper maximus. Integer mattis, eros a iaculis convallis, eros felis tristique quam, nec mollis erat enim ac nulla. Aliquam erat volutpat. Integer placerat vitae nibh nec placerat. Phasellus convallis, est eget fermentum tempor, quam sapien porta felis, at cursus augue ipsum eget purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus pretium nisl sit amet tortor luctus rhoncus. Integer eu mauris ut orci fringilla dignissim in id ante. Maecenas a porttitor eros. Fusce nec elit ut eros efficitur rutrum. Donec efficitur, mi ac porta hendrerit, felis diam laoreet ex, nec eleifend neque libero a urna.
+    </div>
+
+
+    <br>
+    <br>
+
+    <h1>Aula 5</h1>
+
+    <code>background-origin: padding-box ></code>
+    <div id="padding-box" class="exemplo5">
+    </div>
+
+    <code>background-origin: border-box ></code>
+    <div id="border-box" class="exemplo5">  
+    </div>
+
+    <code>background-origin: content-box ></code>
+    <div id="content-box" class="exemplo5">
+    </div>
 
     
 </body>
