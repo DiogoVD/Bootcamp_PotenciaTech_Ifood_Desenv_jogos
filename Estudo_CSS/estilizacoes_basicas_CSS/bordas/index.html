@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas</title>
+
+    <style>
+    .exemplo{
+        background-color: greenyellow;
+        width: 200px;
+        height: 200px;
+        border-width: thick;/* pode se aplicar varias opçoes de espessura padroes: fine, thick, medium. e tabm varias espessuras de cala lado do objeto. exemplo: border-width: 10px 20px 30px 40px; */
+        border-style: solid; /*Pode se aplicar varios padres de estilo  muitos como : grrove, ridige, inset e outset dao ao objeto visual 3d */
+        border-color: blueviolet;/*segue as mesmas definicoes de cores ja estudads, tbm é possivel definir cores individuais de cada borda.*/
+
+        border: thick solid blueviolet; /* as propriedades acima podem ser escritas desta forma*/
+
+        border-radius: 10px;/*define o arredondamento das bordas, tbm pode se definir o arredondamento de cada canto passando os valores individuais, tbm é possivel ovalizar ou formatalo das seguintes maneiras: border-radius:10px/40px ou em percentual border-radius:40%*/
+        
+    }
+    .exemplo1{
+        background-color: black;
+        width: 200px;
+        height: 200px;
+        border: 30px solid;
+    }
+    #source, #slice, #width, #repeat, #outset{
+        border-image-source: url('https://thumbs.dreamstime.com/b/vector-estrelas-lustrosas-da-cor-dos-desenhos-animados-bot%C3%B5es-brilhantes-83467266.jpg');
+    }
+    #slice, #width, #repeat, #outset{
+        
+        border-image-slice: 272; /*border-image-slice: 272 fill;*/
+        border-image-repeat: repeat;
+
+    }
+
+    #width, #repeat{
+        border-image-width: 10px;
+    }
+
+    #repeat, #outset{
+        border-image-width: 20px;
+        border-image-repeat:round stretch;
+        /*pode se usar os seguintes paramentros: 
+        repeat: repete as imagens sem dimensionar nada
+        space: estica a imagem preenchendo os espaços
+        round: divide a area total e redimensiona a imagem para preencher todos os espaços.
+        stretch: estica a imagem preenchendo todo o espaço.
+        */
+    }
+
+    #outset{
+        border-image-repeat:round;
+        border-image-outset: 35px;/* outset: define a distancio em que a bomda fica do objeto*/
+    }
+
+
+    #resumido{
+        border-image: url('https://thumbs.dreamstime.com/b/vector-estrelas-lustrosas-da-cor-dos-desenhos-animados-bot%C3%B5es-brilhantes-83467266.jpg') 272 / 20px / 35px round;
+        /*
+        A configuração é da seguinte forma: 
+        border-image: caminho_da_imagem slice / width / outset repeat
+        */
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1>Bordas</h1>
+    <p>Podemos definir as configuraçoes das nossas bordas atraves das propriedades:</p>
+
+    <ul>
+        <li>border-width</li>
+        <li>border-style</li>
+        <li>border-color</li>
+    </ul>
+    <h2>Exemplo</h2>
+
+    <div class="exemplo"></div>
+
+    <br>
+    <br>
+
+    <h1>Bordas com imagens</h1>
+    
+    <ul>
+        <li>border-image-source</li>
+        <li>border-image-slice</li>
+        <li>border-image-width</li>
+        <li>border-image-repeat</li>
+        <li>border-image-outset</li>
+    </ul>
+    <h2>Exemplos</h2>
+    <br>
+    <code>border-image-source</code>
+    <div id="source" class="exemplo1"></div>
+    <br>
+    <br>
+    <code>border-image-slice</code>
+    <div id="slice" class="exemplo1"></div>
+    <br>
+    <br>
+    <code>border-image-width</code>
+    <div id="width" class="exemplo1"></div>
+    <br>
+    <br>
+    <code>border-image-repeat</code>
+    <div id="repeat" class="exemplo1"></div>
+    <br>
+    <br>
+    <code>border-image-outset</code>
+    <br>
+    <br>
+    <br>
+    <div id="outset" class="exemplo1"></div>
+    <br>
+
+    <br>
+    <br>
+    <code>Declaração resumida</code>
+    <br>
+    <br>
+    <br>
+    <div id="resumido" class="exemplo1"></div>
+
+</body>
+</html>
