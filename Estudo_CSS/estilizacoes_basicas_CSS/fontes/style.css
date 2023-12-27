@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: Oswald;
+    src: url("/Estudo_CSS/estilizacoes_basicas_CSS/fontes/assets/Oswald-Regular.ttf");
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+
+
+
+*{
+    font-family: Arial, robot;
+    padding: 20px 20px 10px;
+}
+
+
+#p1{
+    font-family: 'Just Another Hand';
+    
+}
+
+#p2{
+    font-family: Oswald;
+    color: blue;
+}
