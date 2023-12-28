@@ -18,10 +18,28 @@
 
 #p1{
     font-family: 'Just Another Hand';
-    
+
+    font-size: x-large;/*tamanhos definidos em px ou nomes padroes ex: smaller, larger, x-larger*/
+
+    font-style: italic;/* estilos possiveis italic normal oblique.*/
+
+    font-weight: bold;/*define a espessura da fonte tanto em valor quanto em nomes chaves.*/
+
+    font-variant: small-caps;/*aceita apenas dois valores o normal e o small caps que deixa em maiusculo com tamanho menor que o padrao.*/
+
+    font-stretch: expanded;
+
+    line-height: normal;/*define o tamanho de entre linhas relacionadas ao tamanho da fonte.*/
 }
 
 #p2{
     font-family: Oswald;
     color: blue;
+
+    /*propriedade font resumida*/
+    font: italic small-caps bold 24px/2 Arial
+    /*
+    font: style variant weight size/line-height family
+    */
+
 }
