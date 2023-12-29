@@ -1,0 +1,28 @@
+*{
+    padding: 10px;
+}
+
+h1{
+    text-transform:uppercase;
+    /*define a formatação maiusculo minusculo*/
+
+}
+
+#p1{    
+    text-align: justify;
+
+    text-decoration-line: line-through; /*define a posição da linha no texto, sublinhado riscado*/
+    text-decoration-style: dashed; /*define o tipo de linha no texto, tracejado solido, etc*/
+    text-decoration-color: aqua;/*define a cor da linha no texto*/
+    text-decoration-thickness: 2px;/*define a espessura da linha no texto, fina ou grossa*/
+
+    
+}
+
+#p2{
+    text-align: center;
+
+    text-decoration:underline dashed blue 1px;/*configuração resumida do text decoration
+    text-decoration: line style color thicness
+    */
+}
