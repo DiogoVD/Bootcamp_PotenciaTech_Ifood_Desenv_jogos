@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombras</title>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        border: 10px solid brown;
+        margin: 20px auto;
+        background: orange;
+
+        box-shadow: 20px 20px 10px -10px blue;
+        /*
+        Sombras externas
+        box-shadow: inferior direito desfoque (propagação da sombra) cor
+
+        Sombras internas
+        box-shadow: inset 20px 20px 10px -10px blue;
+        box-shadow: inset inferior direito desfoque (propagação da sombra) cor
+
+        Sombras internas/externas
+        box-shadow: inset 20px 20px 10px -10px blue, 20px 20px 10px -10px blue;
+        box-shadow: inset inferior direito desfoque (propagação da sombra) cor
+        */
+    }
+
+    img{
+        width: 300px;
+        height: 200px;
+        margin: 20px auto;
+        object-fit: cover;
+        filter: drop-shadow(10px 10px 5px violet);
+        /*Aplicação de efeitos de sombra usando elemento filter junto com drop-shadow. obs esse efeito funciona em imagens.png*/
+    }
+
+    h2{
+        color: deeppink;
+        font-size: 40px;
+        text-align: center;
+
+        text-shadow: 10px 10px 5px gray;
+    }
+
+</style>
+
+</head>
+<body>
+    <h1>Propriedade <code>box-shadow</code></h1>
+
+    <div ></div>
+    <br>
+    <br>
+    <img src="https://png.pngtree.com/png-clipart/20230730/ourmid/pngtree-happy-new-year-2024-golden-3d-png-image_9117306.png" alt="">
+
+    <h1>Propriedade <code>text-shadow</code></h1>
+    <h2>
+        Bem-vindo a trilha de CSS na DIO!!
+    </h2>
+    
+</body>
+</html>
