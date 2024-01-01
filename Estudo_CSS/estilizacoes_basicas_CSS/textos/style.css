@@ -16,6 +16,7 @@ h1{
     text-decoration-color: aqua;/*define a cor da linha no texto*/
     text-decoration-thickness: 2px;/*define a espessura da linha no texto, fina ou grossa*/
 
+    text-indent: 20px; /*funciona como o tab definindo espaçamento da primeira linha*/
     
 }
 
@@ -25,4 +26,48 @@ h1{
     text-decoration:underline dashed blue 1px;/*configuração resumida do text decoration
     text-decoration: line style color thicness
     */
+}
+
+#p3{
+    letter-spacing: 5px;
+}
+
+#p4{
+    word-spacing: 10px;
+}
+
+#p5{
+    /*
+    white-space: os valores aplicaveis abaixo e suas definiçoes.
+    
+    normal: este é o modo padrao.
+    
+    nowrap: todo o texto está em apenas 1 linha.
+    
+    pre: apresenta quebra de linha conforme o texto em HTML.
+
+    pre-line: a quebra de linha ocorre tanto como no texto html quanto no estrapolamento da caixa/limite definido(os espaços em branco sao comprimidos).
+
+    pre-wrap: a quebra de linha ocorre tanto como no texto html quanto no estrapolamento da caixa/limite definido(os espaços em branco sao preservados).
+
+    break-spaces: a quebra de linha ocorre tanto como no texto html quanto no estrapolamento da caixa/limite definido(os espaços em branco sao quebrados conforme o limite definido).
+    */
+}
+
+.exemplo{
+    width: 200px;
+}
+p{
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#ex1{
+    text-overflow: clip;
+}
+#ex2{
+    text-overflow: ellipsis;
+}
+#ex3{
+    text-overflow: 'mais>>';/* essa função so funciona no nevegador firefox*/
 }
