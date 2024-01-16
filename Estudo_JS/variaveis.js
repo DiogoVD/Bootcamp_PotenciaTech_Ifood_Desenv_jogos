@@ -35,3 +35,29 @@ console.log(var4+ "fora escopo");
 //ex
 
 const var5 = 15;
+
+// Tipos de dados
+
+// boolean - valores true e false, '' = false, 0 = false
+
+// null - significa ausencia de valor.
+
+// undfined - significa nao declarado.
+
+// Number - exixtem alguns erros de calculo para aredondamentos, para resolver isso há uma biblioteca decimaljs.
+
+// string - o uso de " ", ' ', ´´, quando se quer utilizar aspas dentro de aspas usa-se: 'ola "oi" sou eu'. ou : "ola /"oi/" sou eu"
+
+// symbol - gera um valor imutavel e unico.
+
+// Objetos - é declarado da seguinte forma: 
+// const x = {}
+
+//ex:
+
+const x = {
+    nome: "Diogo",
+    idade: 35
+}
+
+console.log(x.nome)
