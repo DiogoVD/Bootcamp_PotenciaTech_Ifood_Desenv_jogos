@@ -18,3 +18,5 @@ promessaDeUmNumero
     .finally(() => {
         console.log('Finalizou')
     })
+
+    //------------------------------------------------------------------
