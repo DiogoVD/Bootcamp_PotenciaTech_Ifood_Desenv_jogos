@@ -97,7 +97,7 @@ const caminhoArquivo4 = path4.resolve(__dirname, 'tarefas.csv')
 async function buscarArquivo(){
     try{
         const arq = await fs4.promises.readFile(caminhoArquivo4)
-        const textoArq = arq.toString('utf8')
+        const textoArq = arq.toString('utf-8')
         console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
         console.log(textoArq)
         console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
