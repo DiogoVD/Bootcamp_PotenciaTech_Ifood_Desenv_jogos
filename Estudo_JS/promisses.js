@@ -19,7 +19,6 @@ promessaDeUmNumero
         console.log('Finalizou')
     })
 
-const { error } = require('console')
     //------------------------------------------------------------------
 
     //Leitura de arquivos
@@ -86,3 +85,30 @@ promessaArquivo3
     .finally(() => {
         console.log('---------------------------------------------')
     })
+
+//------------------------------------------------------------------
+// Async e Await
+
+const fs4 = require('fs')
+const path4 = require('path')
+
+const caminhoArquivo4 = path4.resolve(__dirname, 'tarefas.csv')
+
+async function buscarArquivo(){
+    try{
+        const arq = await fs4.promises.readFile(caminhoArquivo4)
+        const textoArq = arq.toString('utf8')
+        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+        console.log(textoArq)
+        console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<')
+
+    }catch(error){
+        console.log(error)
+
+    }finally{
+        console.log('---------------------------------------------')
+
+    }
+}
+
+buscarArquivo()
