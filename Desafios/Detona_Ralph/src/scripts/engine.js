@@ -12,6 +12,7 @@ const state = {
         hitPosition: 0,
         result: 0,
         currentTime: 60,
+        namePlayer: null,
     },
     actions:{
         timerID: setInterval(randomSquare, 1000), //velocidade do jogo em 1000 para aumentar a dificuldade esse tempo deve diminuir.
@@ -37,7 +38,7 @@ function countDown(){
     if (state.values.currentTime <= 0){
         clearInterval(state.actions.countDownTimerId)
         clearInterval(state.actions.timerID)
-        alert(`GAME OVER! O seu resultado foi: ${state.values.result};`)
+        alert(`GAME OVER! ${state.values.namePlayer} o seu resultado foi: ${state.values.result} pontos;`)
     }
 }
 
@@ -61,9 +62,14 @@ function addListenerHitBox(){
     });
 }
 
+function player(){
+    state.values.namePlayer = prompt("Qual o seu nome?");
+}
+
 
 
 function init(){
+    player();
     addListenerHitBox();
 }
 
