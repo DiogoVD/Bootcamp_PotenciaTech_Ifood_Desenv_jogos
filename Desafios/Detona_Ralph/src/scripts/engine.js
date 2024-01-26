@@ -8,7 +8,6 @@ const state = {
     },
     /*Altera a parte de codificação*/
     values:{
-        timerID: null,
         hitPosition: 0,
         result: 0,
         currentTime: 60,
@@ -64,6 +63,9 @@ function addListenerHitBox(){
 
 function player(){
     state.values.namePlayer = prompt("Qual o seu nome?");
+    if(state.values.namePlayer === null){
+        state.values.namePlayer = "Player"
+    }
 }
 
 
