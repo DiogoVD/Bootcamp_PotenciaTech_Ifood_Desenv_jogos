@@ -21,10 +21,10 @@ const state = {
 
 function randomSquare(){
     state.view.squares.forEach((square) => {
-        square.classList.remove("enemy");  /* Remove todos os inimigos na tela */
+        square.classList.remove("enemy");  /* Remove todos os inimigos na tela percorrendo todos os quadrados*/
     });
 
-    let randomNumber = Math.floor(Math.random() * 9);
+    let randomNumber = Math.floor(Math.random() * 9);   //formula original: Math.floor(Math.random() * (max - min) + min; onde min é 0 e o max é 9 porque estamos pegando a posição do array de da classe squares;
     let randomSquare = state.view.squares[randomNumber];
     randomSquare.classList.add("enemy");
     state.values.hitPosition = randomSquare.id;
