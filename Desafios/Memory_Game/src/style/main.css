@@ -3,7 +3,14 @@ body{
     justify-content: center;
     align-items: center;
     min-width: 100vh;
-    background: rgb(252, 144, 219);
+
+    background-color: #15151a;
+    opacity: 1;
+    background-image:  linear-gradient(30deg, #4c6168 12%, transparent 12.5%, transparent 87%, #4c6168 87.5%, #4c6168), linear-gradient(150deg, #4c6168 12%, transparent 12.5%, transparent 87%, #4c6168 87.5%, #4c6168), linear-gradient(30deg, #4c6168 12%, transparent 12.5%, transparent 87%, #4c6168 87.5%, #4c6168), linear-gradient(150deg, #4c6168 12%, transparent 12.5%, transparent 87%, #4c6168 87.5%, #4c6168), linear-gradient(60deg, #4c616877 25%, transparent 25.5%, transparent 75%, #4c616877 75%, #4c616877), linear-gradient(60deg, #4c616877 25%, transparent 25.5%, transparent 75%, #4c616877 75%, #4c616877);
+    background-size: 56px 98px;
+    background-position: 0 0, 0 0, 28px 49px, 28px 49px, 0 0, 28px 49px;
+
+    user-select: none;  /*evita que o usuario selecione os cards*/
 }
 
 .container{
@@ -13,14 +20,14 @@ body{
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background: linear-gradient(
-        325deg,
-        #03001e 0%,
-        #7303c0 30%,
-        #ec38bc 70%,
-        #fdeff9 100%
-    );
+    background: linear-gradient( 
+        0deg,  
+        rgba(15,2,2,1) 15%, 
+        rgba(36,163,190,1) 60.1%,
+        rgba(15,2,2,1) 85%
+         );
     padding: 40px 60px;
+
 }
 
 h2{
@@ -44,18 +51,18 @@ h2{
 
 .reset:focus{
     color: #ec38bc;
-    background-color: black;
+    background-color: rgba(15,2,2,1);
 }
 
 .game{
-    width: 432px;
-    height: 432px;
+    width: 430px;
+    height: 430px;
     gap: 10px;
     display: flex;
     flex-wrap: wrap;
     transform-style: preserve-3d;
     perspective: 500px;
-    border: 1px solid black;
+    
 }
 
 .item{
@@ -66,4 +73,27 @@ h2{
     justify-content: center;
     align-items: center;
     background-color: #fff;
+
+    font-size: 4em;
+    transform: rotateY(180deg);
+    transition: 0.5s;
+}
+
+.item::after{
+    content: "";    /*define o conteudo vazio*/
+    position: absolute; 
+    inset: 0;   /*define a posição na face do card*/
+    background: #404040;
+    transition: 0.5s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
 }
