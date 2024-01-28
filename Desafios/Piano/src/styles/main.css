@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: azure;
+}
+
+.container{
+    width: 780px;
+    border: 1px solid blue;
+    border-radius: 20px;
+    padding: 35px 40px;
+}
+
+header h2{
+    font-size: 1.6rem;
+}
+
+header .column{
+    display: flex;
+    align-items: center;
+}
