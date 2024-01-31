@@ -12,3 +12,7 @@ pianoKeys.forEach((key) => {
     console.log(key.dataset.tecla);
     key.addEventListener("click", () => playTune(key.dataset.tecla));
 });
+
+document.addEventListener("keydown", (teclaCaptura) => {
+    playTune(teclaCaptura.key);
+});
