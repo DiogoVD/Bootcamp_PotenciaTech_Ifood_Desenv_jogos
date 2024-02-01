@@ -111,6 +111,10 @@ header .column span{
     font-weight: bold;
 }
 
+.piano-keys .hide span{
+    display: none;
+}
+
 .piano-keys .white.active{
     box-shadow: inset  -5px 10px 20px rgba(0,0,0,0.2);
     background: linear-gradient(to bottom #fff 0%, #535151 100%);
