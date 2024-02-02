@@ -32,10 +32,11 @@
     display: flex;
     height: 100vh;
 }
-
+/* ---------------Menu esquerdo-------------- */
 .container__left{
     width: 30%;
     min-width: 250px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -66,4 +67,65 @@
 }
 #card-type{
     font-size: 1rem;
+}
+
+/* -------------Menu direido--------------- */
+.container__right{
+    width: 70%;
+
+    
+}
+
+.card-box__coontainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.3rem;
+}
+
+.card-versus__container{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.1rem;
+    height: 300px;
+}
+
+.versus-top,
+.versus-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.versus-bottom{
+    margin-top: 1rem;
+}
+
+#next-duel{
+    display: none;
+}
+
+.card-box{
+    height: 9rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-infield{
+    height: 11.2rem;
+    width: 8rem;
+    border-radius: 8px;
+}
+
+.card{
+    transition: transform 0.2s;
+}
+
+.card:hover{
+    transform: scale(1.2);
 }

@@ -34,8 +34,8 @@
                 <img src="" alt="" id="card-image">
             </div>
             <div class="card_details frame">
-                <p id="card-name">xxx</p>
-                <p id="card-type">xxx</p>
+                <p id="card-name">Selecione</p>
+                <p id="card-type">um card</p>
             </div>
         </div>
 
@@ -44,7 +44,24 @@
                 <div class="card-box framed" id="computer-cards">
 
                 </div>
-                <div class="card-versus">
+                <div class="card-versus__container">
+                    <div class="versus-top">
+                        <div class="card-infield">
+                            <img src="" alt="" id="player-field-card" height="180px" width="125px">
+                        </div>
+                        <img height="100px" src="./src/assets/icons/millenium2.png" alt="">
+                        <div class="card-infield">
+                            <img src="" alt="" id="computer-field-card" height="180px" width="125px">
+                        </div>
+                    </div>
+
+                    <div class="versus-bottom">
+                        <button
+                        id="next-duel"
+                        class="rpgui-button"
+                        onclick="resetDuel()"
+                        >Ganhou</button>
+                    </div>
 
                 </div>
                 <div class="card-box framed" id="player-cards">
