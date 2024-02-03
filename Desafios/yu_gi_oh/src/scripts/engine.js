@@ -76,6 +76,30 @@ async function createCardImage(idCard, fieldSide){
     return cardImage;
 }
 
+async function setCardsField(cardId){
+    await removeAllCardsImages();
+
+    let computerCardId = await getRandomCardId();
+
+    state.fieldCards.player.style.display = "block";
+    state.fieldCards.computer.style.display = "block";
+    
+    // seta os cards selecionados
+    state.fieldCards.player.src = cardData[cardId].img;
+    state.fieldCards.computer.src = cardData[computerCardId].img;
+
+    let duelResult = await checkDuelResults(cardId, computerCardId);
+
+    await updateScore();
+    await drawButton(duelResult);
+}
+
+async function removeAllCardsImages(){
+
+    // Continua Aqui
+
+}
+
 async function drawSelectCards(index){
     state.cardSprites.avatar.src = cardData[index].img;
     state.cardSprites.name.innerText = cardData[index].name;
@@ -99,4 +123,3 @@ function init(){
 
 init();
 
-// continua em implementando setCardField
