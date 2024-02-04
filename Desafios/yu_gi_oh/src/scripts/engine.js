@@ -83,21 +83,34 @@ async function setCardsField(cardId){
 
     let computerCardId = await getRandomCardId();
 
-    state.fieldCards.player.style.display = "block";
-    state.fieldCards.computer.style.display = "block";
+    await showHidenCardsFieldsImages(true);
 
-    removeCardsDetail();
+    await removeCardsDetail();
 
-    // continua aqui exract to mehod
-    
     // seta os cards selecionados
-    state.fieldCards.player.src = cardData[cardId].img;
-    state.fieldCards.computer.src = cardData[computerCardId].img;
+    await drawCardsInfield(cardId, computerCardId);
 
     let duelResult = await checkDuelResults(cardId, computerCardId);
 
     await updateScore();
     await drawButton(duelResult);
+}
+
+async function drawCardsInfield(cardId, computerCardId){
+    state.fieldCards.player.src = cardData[cardId].img;
+    state.fieldCards.computer.src = cardData[computerCardId].img;
+}
+
+async function showHidenCardsFieldsImages(valueBolean){
+    if(valueBolean === true){
+        state.fieldCards.player.style.display = "block";
+        state.fieldCards.computer.style.display = "block";
+    }
+
+    if(valueBolean === false){
+        state.fieldCards.player.style.display = "none";
+        state.fieldCards.computer.style.display = "none";
+    }
 }
 
 async function removeCardsDetail(){
@@ -165,8 +178,7 @@ async function resetDuel(){
     state.cardSprites.avatar.src = "";
     state.actions.button.style.display = "none";
 
-    state.fieldCards.player.style.display = "none";
-    state.fieldCards.computer.style.display = "none";
+    showHidenCardsFieldsImages(false);
 
     init();
 }
@@ -177,14 +189,21 @@ async function playAudio(status){
 }
 
 function init(){
-    state.fieldCards.player.style.display = "none";
-    state.fieldCards.computer.style.display = "none";
-
+    
+    showHidenCardsFieldsImages(false);
+    
     drawCards(5, state.playerSides.player1);
     drawCards(5, state.playerSides.computer);
 
+    playBgm()
+
 }
 
+async function playBgm(){
+    const bgm = document.getElementById("bgm");
+    bgm.play();
+    bgm.volume = 0.3;
+}
 
 
 init();
