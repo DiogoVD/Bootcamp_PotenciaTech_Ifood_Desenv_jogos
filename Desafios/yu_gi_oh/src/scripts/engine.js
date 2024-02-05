@@ -70,9 +70,14 @@ async function createCardImage(idCard, fieldSide){
         cardImage.addEventListener("click", () => {
             setCardsField(cardImage.getAttribute("data-id"));
         })
-    
+        
         cardImage.addEventListener("mouseover", () => {
             drawSelectCards(idCard);
+        });
+
+        // remove o detalhe da carta se nao estiver com o mouse em cima.
+        cardImage.addEventListener("mouseout", () => {
+            removeCardsDetail();
         });
     }
     return cardImage;
@@ -190,12 +195,11 @@ async function playAudio(status){
 
 function init(){
     
+    playBgm();
     showHidenCardsFieldsImages(false);
     
     drawCards(5, state.playerSides.player1);
     drawCards(5, state.playerSides.computer);
-
-    playBgm()
 
 }
 
