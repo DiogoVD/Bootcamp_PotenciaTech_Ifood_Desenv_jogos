@@ -198,8 +198,8 @@ function init(){
     playBgm();
     showHidenCardsFieldsImages(false);
     
-    drawCards(5, state.playerSides.player1);
-    drawCards(5, state.playerSides.computer);
+    drawCards(6, state.playerSides.player1);
+    drawCards(6, state.playerSides.computer);
 
 }
 
